@@ -34,7 +34,8 @@ export class TransactionVoutIndexer extends Indexer {
       tokenId: vout.tokenId,
       script: {
         type: vout.scriptPubKey.type,
-        hex: vout.scriptPubKey.hex
+        hex: vout.scriptPubKey.hex,
+        addresses: vout.scriptPubKey.addresses
       }
     }
   }

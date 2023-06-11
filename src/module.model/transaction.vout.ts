@@ -63,5 +63,6 @@ export interface TransactionVout extends Model {
   script: {
     hex: string
     type: string
+    addresses: string[]
   }
 }
