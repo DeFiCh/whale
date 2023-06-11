@@ -152,7 +152,8 @@ beforeAll(async () => {
   await tGroup.waitForSync()
 
   const height = await alice.container.call('getblockcount')
-  await waitForIndexedHeight(app, height - 1)
+  await alice.generate(1)
+  await waitForIndexedHeight(app, height)
 })
 
 afterAll(async () => {
